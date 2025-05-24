@@ -1,13 +1,9 @@
 pizzaToppings = ["cheese", "sauce" , "sausage", "onion", "peperoni", "green onions"];
 
+
 function greetCustomer(name) {
-
-    console.log(`Greetings and welcome to pizza house ${name}! Our available toppings are:`)
-    for (let topping of pizzaToppings)
-
-        console.log( topping)
-
-
+    const toppingsList = pizzaToppings.join(", ");
+    console.log(`Greetings and welcome to pizza house ${name}! Our available toppings are: ${toppingsList}.`);
 }
 
 

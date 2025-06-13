@@ -2,56 +2,8 @@ html {
   background-color: antiquewhite;
 }
 
-body {
-  text-align: center;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  font-size: 50px;
-}
-
-img {
-  max-width: 100%;  /* makes images responsive */
-  height: auto;     /* maintains aspect ratio */
-}
-
-div {
-  border: 2px solid burlywood;
-  margin: 10px;
-  box-sizing: border-box; /* ensures padding/border don’t break layouts */
-}
-
-#introPic {
-  float: left;
-  width: 45%;  /* better control over width */
-}
-
-#about-me {
-  float: right;
-  width: 45%;
-  text-align: left; /* optional for better readability */
-  padding: 0;
-}
-
-#about-me > li {
-  padding: 2px;
-}
-
-#pro {
-  width: auto;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Media Query for iPhone 6/7/8 (375px) */
+/* Media Query for iPhone 6/7/8 (375px) 
+applies this rule if screen is 375px wide or smaller which is the width of iphone6/7/8 in portrait mode */
 @media screen and (max-width: 375px) {
   #introPic,
   #about-me {
@@ -59,12 +11,38 @@ div {
     width: 100%;  /* full width for small screens */
     text-align: center; /* centers text on mobile */
   }
+}
 
-  #about-me {
-    padding: 0;
-  }
+body {
+  text-align: center;
+  font-size: 18px;
+}
 
-  h1 {
-    font-size: 36px; 
-  }
+h1 {
+  font-size: 50px;
+}
+
+img {
+  height: 100%;
+}
+
+div {
+  border: 2px solid burlywood;
+  margin: 10px;
+}
+
+#introPic {
+  float: left;
+}
+
+#about-me {
+  float: right;
+}
+
+#about-me>li {
+  padding: 2px;
+}
+
+#pro {
+  width: auto;
 }

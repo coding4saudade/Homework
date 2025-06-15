@@ -2,47 +2,74 @@ html {
   background-color: antiquewhite;
 }
 
-/* Media Query for iPhone 6/7/8 (375px) 
-applies this rule if screen is 375px wide or smaller which is the width of iphone6/7/8 in portrait mode */
-@media screen and (max-width: 375px) {
-  #introPic,
-  #about-me {
-    float: none;
-    width: 100%;  /* full width for small screens */
-    text-align: center; /* centers text on mobile */
-  }
-}
-
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   font-size: 18px;
+  margin: 0;
 }
 
 h1 {
   font-size: 50px;
+  margin-top: 20px;
 }
 
-img {
-  height: 100%;
+/* Flex container for top section */
+#top-section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column; /* flex direction column and align items center makes the img sit on top of the ul*/
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%; /* limits width to avoid stretching on big screens */
+  margin: 20px auto;
 }
 
-div {
-  border: 2px solid burlywood;
-  margin: 10px;
-}
-
-#introPic {
-  float: left;
-}
-
+#introPic,
 #about-me {
-  float: right;
+  width: 45%; /* each side takes roughly half */
+  border: 2px solid burlywood;
+  margin: 20px auto;
+  box-sizing: border-box;
+
 }
 
-#about-me>li {
+/* Image scaling */
+#introPic img {
+  width: 100%;
+  height: auto;
+}
+
+#about-me > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#about-me li {
   padding: 2px;
 }
 
 #pro {
-  width: auto;
+  border: 2px solid burlywood;
+  margin: 10px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+/* Media Query for small screens like iPhone 6/7/8 */
+@media screen and (max-width: 500px) {
+  #top-section {
+    width: 100%;
+  }
+  #introPic,
+  #about-me {
+    width: 100%;
+  }
+
+  #introPic img {
+    width: 90%;
+  }
 }
